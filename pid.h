@@ -10,22 +10,22 @@
 
 
 typedef struct {
-	float p;
-	float i;
-	float d;
+    float p;
+    float i;
+    float d;
 } pid_gain_t;
 
 typedef struct {
-	pid_gain_t k; // k is used as symbol for gain
-	float p;
-	float i;
-	float d;
-	float pv_previous;
-	float sp;
-	float pv; // process variable - input
-	float cv; // control variable - output
-	float cv_min;
-	float cv_max;
+    pid_gain_t k; // k is used as symbol for gain
+    float p;
+    float i;
+    float d;
+    float pv_previous;
+    float sp;
+    float pv; // process variable - input
+    float cv; // control variable - output
+    float cv_min;
+    float cv_max;
 } pid_handle_t;
 
 float pid_calc(pid_handle_t* pid, float pv, float sp);
